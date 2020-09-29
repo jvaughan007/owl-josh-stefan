@@ -1,14 +1,33 @@
-import React from 'react';
-import Participants from './Components/Participants';
+import React, { Component } from 'react';
+import ParticipantsList from './Components/ParticipantsList'
 
-function App() {
-  return (
-    <main className='App'>
-      <Split className='ParticipantsList' flexBasis='1'></Split>
-      <Split className=''></Split>
-      
-    </main>
-  );
+class App extends Component {
+  static defaultProps = {
+    store: {
+      participants: []
+    }
+  };
+
+  render() {
+    const { store } = this.props
+    return (
+      <main className='App'>
+        <div className='List'>
+            <ParticipantsList 
+            participants={store.participants}
+            />        
+        </div>
+        
+        <div className='Stage'></div>
+        
+      </main>
+    );
+  }
 }
+
+
+
+  
+
 
 export default App;

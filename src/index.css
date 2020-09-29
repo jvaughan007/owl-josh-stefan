@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.session-participant .participant-status:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.session-participant .participant-status {
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #8e939a;
+  padding-left: 20px;
+  position: relative;
+  top: -10px;
+}
+
+.session-participant .participant-status.participant-status__green:after {
+  background-color: #64d481;
+}
+
+.session-participant .participant-status.participant-status__gray:after {
+  background-color: #d0d2d5;
+}
+
+.session-participant {
+  display: flex;
+}
+
+.participant-status {
+  position: relative;
+}
